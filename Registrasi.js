@@ -20,8 +20,10 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
   }
 
   alert(`Pendaftaran berhasil!\nNama: ${name}\nEmail: ${email}`);
+  window.location.href = "Home.html";
 });
 
+// Toggle show/hide password
 document.querySelectorAll('.toggle-password').forEach(icon => {
   const targetId = icon.getAttribute('data-target');
   const input = document.getElementById(targetId);
@@ -43,10 +45,4 @@ const togglePassword = document.querySelector('[data-target="password"]');
 
 passwordInput.addEventListener("input", () => {
   togglePassword.style.display = passwordInput.value ? "inline" : "none";
-});
-
-document.getElementById("registerForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  
-  window.location.href = "Home.html";
 });
