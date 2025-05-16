@@ -246,3 +246,11 @@ body {
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
