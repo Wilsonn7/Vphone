@@ -134,7 +134,6 @@ input[type="checkbox"] {
   color: #ff9900;
 }
 
-/* Responsive */
 @media (max-width: 500px) {
   .form-box {
     padding: 1.5rem;
