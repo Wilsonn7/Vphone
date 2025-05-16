@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #1e1e3f, #2c2c54);
+  color: white;
+}
+
+.produk-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid white;         /* ➕ BORDER PUTIH */
+  border-radius: 15px;             /* ➕ RADIUS AGAR LEMBUT */
+  background-color: rgba(0, 0, 0, 0.2); /* ➕ SUPAYA BERBEDA DARI BACKGROUND */
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.nav-links li a:hover {
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.nav-links a.active {
+  color: red;
+}
+
+.produk-header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.produk-header h1 {
+  color: #ff3c00;
+  margin-bottom: 0;
+}
+
+.produk-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.produk-filters button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.produk-filters button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.produk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.produk-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.produk-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.produk-card h3 {
+  margin: 10px 0 5px;
+}
+
+.produk-card a {
+  background: #fff;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+}
