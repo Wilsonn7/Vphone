@@ -1,3 +1,4 @@
+// script.js
 document.getElementById('registerForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -10,7 +11,7 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
 
   if (password !== confirmPassword) {
     alert("Password dan konfirmasi password tidak cocok.");
-    return; // MENCEGAH redirect
+    return;
   }
 
   if (!terms) {
@@ -20,4 +21,28 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
 
   alert(`Pendaftaran berhasil!\nNama: ${name}\nEmail: ${email}`);
   window.location.href = "Home.html";
+});
+
+// Toggle show/hide password
+document.querySelectorAll('.toggle-password').forEach(icon => {
+  const targetId = icon.getAttribute('data-target');
+  const input = document.getElementById(targetId);
+
+  input.addEventListener('input', function () {
+    icon.style.display = input.value ? 'inline' : 'none';
+  });
+
+  icon.addEventListener('click', function () {
+    const isPassword = input.getAttribute('type') === 'password';
+    input.setAttribute('type', isPassword ? 'text' : 'password');
+    icon.textContent = isPassword ? '🙈' : '👁';
+  });
+});
+
+// Tampilkan ikon 👁 saat user mulai mengetik
+const passwordInput = document.getElementById("password");
+const togglePassword = document.querySelector('[data-target="password"]');
+
+passwordInput.addEventListener("input", () => {
+  togglePassword.style.display = passwordInput.value ? "inline" : "none";
 });
