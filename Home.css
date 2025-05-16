@@ -172,6 +172,10 @@ body {
   right: 10px;
 }
 
+.nav-btn {
+  z-index: 10; /* tambahkan ini */
+}
+
 @media (max-width: 1024px) {
   .slide-content {
     padding: 30px;
