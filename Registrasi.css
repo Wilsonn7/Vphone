@@ -1,0 +1,350 @@
+:root {
+  --primary: #4361ee;
+  --primary-dark: #3a56d4;
+  --accent: #f72585;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --success: #4cc9f0;
+  --warning: #f8961e;
+  --danger: #ef233c;
+  --radius: 10px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 480px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-box {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.form-box:hover {
+  transform: translateY(-5px);
+}
+
+.form-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.form-header .logo {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 24px;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.form-body {
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.form-group.floating label {
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  font-size: 15px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.form-group.floating input,
+.form-group.floating select {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: all 0.3s;
+  background-color: #f9f9f9;
+}
+
+.form-group.floating select {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group.floating input:focus,
+.form-group.floating select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  background-color: white;
+  outline: none;
+}
+
+.form-group.floating input:focus ~ label,
+.form-group.floating input:not(:placeholder-shown) ~ label,
+.form-group.floating select:focus ~ label,
+.form-group.floating select:not([value=""]) ~ label {
+  top: 0;
+  left: 45px;
+  font-size: 12px;
+  background: white;
+  padding: 0 5px;
+  color: var(--primary);
+}
+
+.form-group.floating input:focus ~ i,
+.form-group.floating input:not(:placeholder-shown) ~ i,
+.form-group.floating select:focus ~ i,
+.form-group.floating select:not([value=""]) ~ i {
+  color: var(--primary);
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-strength {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--gray);
+  font-size: 16px;
+  transition: all 0.3s;
+  visibility: visible;
+}
+
+.toggle-password.visible {
+  visibility: visible;
+}
+
+.toggle-password:hover {
+  color: var(--primary);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+  accent-color: var(--primary);
+}
+
+.checkbox-group label {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.checkbox-group a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.submit-btn i {
+  transition: transform 0.3s;
+}
+
+.submit-btn:hover i {
+  transform: translateX(5px);
+}
+
+.form-footer {
+  padding: 20px 30px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.form-footer p {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 15px;
+}
+
+.form-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--gray);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.back-link i {
+  font-size: 12px;
+}
+
+/* Error states */
+.error-message {
+  color: var(--danger);
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.has-error .error-message {
+  display: block;
+}
+
+.has-error input,
+.has-error select {
+  border-color: var(--danger) !important;
+}
+
+.has-error .toggle-password {
+  color: var(--danger);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .form-header {
+    padding: 25px;
+  }
+  
+  .form-body {
+    padding: 25px;
+  }
+  
+  .form-header h2 {
+    font-size: 20px;
+  }
+  
+  .form-group.floating input,
+  .form-group.floating select {
+    padding: 12px 12px 12px 40px;
+    font-size: 14px;
+  }
+  
+  .form-group i {
+    left: 12px;
+    font-size: 14px;
+  }
+  
+  .form-group.floating label {
+    left: 40px;
+    font-size: 14px;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
