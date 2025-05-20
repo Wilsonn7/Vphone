@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (validateForm()) {
       // Always redirect to home.html after successful validation
-      window.location.href = "home.html";
+      window.location.href = "Home.html";
     }
   });
 });
