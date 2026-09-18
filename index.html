@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Registrasi Premium</title>
+  <link rel="stylesheet" href="Font/all.min.css">
+  <link rel="stylesheet" href="Registrasi.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-box">
+      <div class="form-header">
+        <div class="logo">
+          <i class="fas fa-user-plus"></i>
+        </div>
+        <h2 id="authTitle">Buat Akun Baru</h2>
+        <p id="authSubtitle">Bergabunglah dengan komunitas kami</p>
+      </div>
+
+      <div id="registerPanel" class="auth-panel">
+        <form id="registerForm" class="form-body">
+          <div class="form-group floating">
+            <input type="text" id="name" placeholder=" " required>
+            <label for="name">Nama Lengkap</label>
+            <i class="fas fa-user"></i>
+          </div>
+
+          <div class="form-group floating">
+            <input type="text" id="username" placeholder=" " required>
+            <label for="username">Username</label>
+            <i class="fas fa-at"></i>
+          </div>
+
+          <div class="form-group floating">
+            <select id="gender" required>
+              <option value=""></option>
+              <option value="male">Laki-laki</option>
+              <option value="female">Perempuan</option>
+            </select>
+            <label for="gender">Jenis Kelamin</label>
+            <i class="fas fa-venus-mars"></i>
+          </div>
+
+          <div class="form-group floating">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">Alamat Email</label>
+            <i class="fas fa-envelope"></i>
+          </div>
+
+          <div class="form-group floating password-group">
+            <input type="password" id="password" placeholder=" " required>
+            <label for="password">Password</label>
+            <i class="fas fa-lock"></i>
+            <span class="toggle-password" onclick="togglePassword('password')">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+
+          <div class="form-group floating password-group">
+            <input type="password" id="confirmPassword" placeholder=" " required>
+            <label for="confirmPassword">Konfirmasi Password</label>
+            <i class="fas fa-lock"></i>
+            <span class="toggle-password" onclick="togglePassword('confirmPassword')">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">
+              Saya setuju dengan <a href="#">Syarat Layanan</a> dan <a href="#">Kebijakan Privasi</a>
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Daftar Sekarang</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+
+      <div id="loginPanel" class="auth-panel hidden">
+        <form id="loginForm" class="form-body">
+          <div class="form-group floating">
+            <input type="text" id="loginIdentifier" placeholder=" " required>
+            <label for="loginIdentifier">Email atau Username</label>
+            <i class="fas fa-user"></i>
+          </div>
+
+          <div class="form-group floating password-group">
+            <input type="password" id="loginPassword" placeholder=" " required>
+            <label for="loginPassword">Password</label>
+            <i class="fas fa-lock"></i>
+            <span class="toggle-password" onclick="togglePassword('loginPassword')">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span>Masuk</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="form-footer">
+        <p id="switchText">Sudah punya akun? <a href="#" id="showLoginLink">Masuk disini</a></p>
+        <p id="registerPrompt" class="hidden-link" style="display:none;">Belum punya akun? <a href="#" id="showRegisterLink">Daftar disini</a></p>
+        <a href="Home.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="Registrasi.js"></script>
+</body>
+</html>
